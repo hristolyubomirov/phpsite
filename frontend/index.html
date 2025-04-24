@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Survey</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/javascript" src="/mespeak.js"></script>
+    <script type="text/javascript">
+      meSpeak.loadConfig("mespeak_config.json");
+      meSpeak.loadVoice("en.json");
+        // Проверка дали meSpeak е наличен
+  console.log("Checking meSpeak availability:", window.meSpeak);
+  if (window.meSpeak) {
+    console.log("meSpeak loaded successfully.");
+  } else {
+    console.error("meSpeak is not loaded.");
+  }
+    </script>
+    <script type="text/javascript" src="/speak.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
